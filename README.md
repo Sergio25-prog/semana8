@@ -1,5 +1,6 @@
 # 💻 Tienda de Tecnología - Diseño Web Adaptable
 
+
 Este repositorio contiene el desarrollo del proyecto de maquetación responsiva correspondiente a la asignatura de **Programación Web 1** (Semana 8). El objetivo principal del proyecto es estructurar una interfaz web que se adapte fluidamente a diferentes dispositivos móviles y de escritorio.
 
 ## 🎯 Descripción del Proyecto
@@ -14,6 +15,14 @@ El caso práctico simula los requerimientos de los propietarios de una tienda de
 *   **Metodología BEM (Block, Element, Modifier):** Nomenclatura estandarizada en las clases CSS para asegurar un código escalable, modular y fácil de mantener.
 
 ## ⚙️ Características Principales
+
+### Vista Previa del Proyecto
+
+**Resolución de Escritorio:**
+![Vista Escritorio](assets/desktop_view.png)
+
+**Resolución Móvil:**
+![Vista Móvil](assets/mobile_view.png)
 
 1.  **Navegación Flexible:** El menú principal (`display: flex`) distribuye los enlaces de forma horizontal en resoluciones de escritorio y cambia su eje (`flex-direction: column`) para apilarse de forma táctil en dispositivos móviles.
 2.  **Galería de Ofertas Fluida:** Implementación de tarjetas de productos que ajustan su ancho base de manera dinámica mediante la propiedad `flex: 1 1 250px` y `flex-wrap`, permitiendo múltiples columnas en escritorio y una sola columna en pantallas reducidas.
