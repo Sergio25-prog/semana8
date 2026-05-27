@@ -1,0 +1,132 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* =========================================
+   ESTILOS DEL HEADER Y MENÚ (FLEXBOX)
+   ========================================= */
+.header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 2rem;
+    /* Contenedor flexible principal */
+    display: flex;
+    justify-content: space-between; /* Separa logo y menú */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Permite que el menú baje si no hay espacio */
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav__list {
+    list-style: none;
+    /* Contenedor flexible para los enlaces */
+    display: flex;
+    gap: 20px; /* Espacio entre los elementos flexibles */
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: #3498db;
+}
+
+/* =========================================
+   ESTILOS DE LA GALERÍA (FLEXBOX)
+   ========================================= */
+.offers {
+    padding: 2rem;
+    text-align: center;
+}
+
+.offers__title {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.gallery {
+    /* Contenedor flexible de la galería */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen a la siguiente línea */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    gap: 20px; /* Espacio uniforme entre tarjetas */
+}
+
+.gallery__item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Elemento flexible: crece, no se encoge más de la cuenta, y toma un ancho base */
+    flex: 1 1 250px; 
+    max-width: 300px; /* Límite para que no se estire demasiado en pantallas grandes */
+    padding-bottom: 1rem;
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery__product-name {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.gallery__price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   MEDIA QUERIES (DISEÑO RESPONSIVO)
+   ========================================= */
+
+/* Adaptación para Tablets y Smartphones (máximo 768px de ancho) */
+@media screen and (max-width: 768px) {
+    
+    /* El header cambia su dirección a columna para apilar logo y menú */
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    /* El menú de navegación también se apila en columna */
+    .nav__list {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav__item {
+        background-color: #34495e;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    /* Ajuste en la galería: las tarjetas ocupan casi todo el ancho */
+    .gallery__item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
